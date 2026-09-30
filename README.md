@@ -66,3 +66,25 @@ O projeto utiliza Git e GitHub para controle de versão, com organização basea
 
 HTML5, CSS3, JavaScript, localStorage, SweetAlert2, Git e GitHub.
 
+
+
+\## Estratégia de versionamento
+
+
+
+O projeto utiliza uma organização inspirada no GitFlow:
+
+
+
+\- `main`: versão principal e estável do projeto.
+
+\- `develop`: branch de desenvolvimento e integração.
+
+\- `feature/formulario`: desenvolvimento relacionado ao formulário.
+
+\- `feature/documentacao`: melhorias e atualização da documentação.
+
+
+
+As mensagens de commit seguem o padrão Conventional Commits, utilizando identificadores como `docs:` para alterações na documentação e `feat:` para novas funcionalidades.
+
