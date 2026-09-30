@@ -1,0 +1,670 @@
+/* ========================================
+   DESIGN SYSTEM
+======================================== */
+
+:root {
+    /* Cores do projeto */
+    --cor-primaria: #2E7D32;
+    --cor-primaria-clara: #66BB6A;
+    --cor-secundaria: #F9A825;
+    --cor-secundaria-clara: #FFD54F;
+    --cor-fundo: #F5F5F5;
+    --cor-branca: #FFFFFF;
+    --cor-texto: #333333;
+    --cor-cinza: #757575;
+
+    /* Tamanhos das fontes */
+    --fonte-1: 2.5rem;
+    --fonte-2: 2rem;
+    --fonte-3: 1.5rem;
+    --fonte-4: 1.25rem;
+    --fonte-5: 1rem;
+
+    /* Espaçamentos */
+    --espaco-1: 8px;
+    --espaco-2: 16px;
+    --espaco-3: 24px;
+    --espaco-4: 32px;
+    --espaco-5: 48px;
+}
+
+
+/* ========================================
+   CONFIGURAÇÕES GERAIS
+======================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: var(--fonte-5);
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+}
+
+h1 {
+    font-size: var(--fonte-1);
+}
+
+h2 {
+    font-size: var(--fonte-3);
+    color: var(--cor-primaria);
+}
+
+p {
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   CABEÇALHO
+======================================== */
+
+header {
+    background-color: var(--cor-primaria);
+    color: var(--cor-branca);
+    padding: var(--espaco-3) 6%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--espaco-2);
+}
+
+header h1 {
+    margin: 0;
+    color: var(--cor-branca);
+}
+
+
+/* ========================================
+   NAVEGAÇÃO
+======================================== */
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: var(--espaco-2);
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: var(--cor-branca);
+    text-decoration: none;
+    padding: 10px 14px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: var(--cor-primaria-clara);
+    text-decoration: none;
+}
+
+nav a:focus {
+    outline: 2px solid var(--cor-branca);
+    outline-offset: 2px;
+}
+
+
+/* ========================================
+   DROPDOWN
+======================================== */
+
+.dropdown {
+    position: relative;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    background-color: var(--cor-branca);
+    padding: var(--espaco-1);
+    min-width: 180px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+}
+
+.submenu a {
+    color: var(--cor-texto);
+}
+
+.submenu a:hover {
+    background-color: #E8F5E9;
+    color: var(--cor-primaria);
+}
+
+.dropdown:hover .submenu {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ========================================
+   MENU HAMBÚRGUER
+======================================== */
+
+.menu-toggle {
+    display: none;
+    background-color: var(--cor-branca);
+    color: var(--cor-primaria);
+    border: none;
+    border-radius: 6px;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
+/* ========================================
+   GRID PRINCIPAL - 12 COLUNAS
+======================================== */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--espaco-3);
+
+    width: 90%;
+    max-width: 1200px;
+    margin: var(--espaco-5) auto;
+}
+
+
+/* Imagem principal da ONG */
+
+.grid > img {
+    grid-column: span 12;
+
+    display: block;
+    width: 100%;
+    max-width: 700px;
+    max-height: 420px;
+    object-fit: contain;
+
+    margin: 0 auto var(--espaco-3);
+    border-radius: 12px;
+}
+
+
+/* Blocos de conteúdo da página inicial */
+
+.grid > section {
+    grid-column: span 4;
+
+    background-color: var(--cor-branca);
+    padding: var(--espaco-3);
+    border-radius: 12px;
+    border-top: 5px solid var(--cor-primaria);
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ========================================
+   FLEXBOX
+======================================== */
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espaco-1);
+}
+
+
+/* ========================================
+   ÁREA "COMO AJUDAR"
+======================================== */
+
+.feedback {
+    width: 90%;
+    max-width: 1200px;
+    margin: var(--espaco-4) auto;
+    padding: var(--espaco-4);
+
+    background-color: var(--cor-branca);
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.feedback h2 {
+    margin-bottom: var(--espaco-2);
+}
+
+
+/* ========================================
+   BADGES
+======================================== */
+
+.badge {
+    display: inline-block;
+    width: fit-content;
+
+    background-color: var(--cor-primaria);
+    color: var(--cor-branca);
+
+    padding: 6px 12px;
+    margin-right: var(--espaco-1);
+    margin-bottom: var(--espaco-1);
+
+    border-radius: 20px;
+    font-size: var(--fonte-5);
+}
+
+
+/* ========================================
+   ALERTA
+======================================== */
+
+.alerta {
+    background-color: #FFF8E1;
+    color: var(--cor-texto);
+
+    padding: var(--espaco-2);
+    margin: var(--espaco-2) 0;
+
+    border-radius: 8px;
+    border-left: 5px solid var(--cor-secundaria);
+}
+
+
+/* ========================================
+   BOTÕES
+======================================== */
+
+button {
+    width: fit-content;
+
+    background-color: var(--cor-primaria);
+    color: var(--cor-branca);
+
+    border: none;
+    border-radius: 8px;
+
+    padding: 12px 20px;
+
+    font-size: var(--fonte-5);
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: var(--cor-primaria-clara);
+}
+
+button:focus {
+    outline: 3px solid var(--cor-secundaria);
+    outline-offset: 2px;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+/* ========================================
+   CARDS DOS PROJETOS
+======================================== */
+
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: var(--espaco-5) auto;
+}
+
+.grid {
+    width: 90%;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--espaco-3);
+    margin-top: var(--espaco-3);
+}
+
+.card {
+    flex: 1 1 280px;
+
+    background-color: var(--cor-branca);
+    padding: var(--espaco-4);
+
+    border: 1px solid #DDDDDD;
+    border-top: 5px solid var(--cor-primaria);
+    border-radius: 12px;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.card h2,
+.card h3 {
+    margin-top: 0;
+    color: var(--cor-primaria);
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.14);
+}
+
+
+/* ========================================
+   FORMULÁRIO DE CADASTRO
+======================================== */
+
+form {
+    max-width: 800px;
+    margin: var(--espaco-3) auto;
+
+    background-color: var(--cor-branca);
+    padding: var(--espaco-4);
+
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+fieldset {
+    border: 1px solid #CCCCCC;
+    border-radius: 10px;
+
+    padding: var(--espaco-3);
+    margin-bottom: var(--espaco-3);
+}
+
+legend {
+    color: var(--cor-primaria);
+    font-size: var(--fonte-4);
+    font-weight: bold;
+    padding: 0 var(--espaco-1);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+
+    border: 1px solid #AAAAAA;
+    border-radius: 6px;
+
+    font-size: var(--fonte-5);
+    background-color: var(--cor-branca);
+}
+
+input:focus {
+    outline: 2px solid var(--cor-primaria);
+    border-color: var(--cor-primaria);
+}
+
+
+/* ========================================
+   VALIDAÇÃO DO FORMULÁRIO
+======================================== */
+
+input.campo-erro {
+    border: 2px solid #C62828;
+    background-color: #FFF5F5;
+}
+
+input.campo-sucesso {
+    border: 2px solid var(--cor-primaria-clara);
+    background-color: #F1F8F2;
+}
+
+.mensagem-erro {
+    display: block;
+    min-height: 20px;
+    margin-top: 5px;
+    color: #C62828;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+input.campo-erro:focus {
+    outline: 2px solid #C62828;
+    outline-offset: 1px;
+}
+
+input.campo-sucesso:focus {
+    outline: 2px solid var(--cor-primaria);
+    outline-offset: 1px;
+}
+
+
+/* ========================================
+   MODAL
+======================================== */
+
+.modal {
+    display: none;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.55);
+
+    align-items: center;
+    justify-content: center;
+
+    padding: var(--espaco-2);
+    z-index: 100;
+}
+
+.modal.modal-aberto {
+    display: flex;
+}
+
+.modal-conteudo {
+    width: 100%;
+    max-width: 450px;
+
+    background-color: var(--cor-branca);
+    padding: var(--espaco-4);
+
+    border-radius: 12px;
+    border-top: 5px solid var(--cor-primaria);
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+.modal-conteudo h2 {
+    color: var(--cor-primaria);
+}
+
+
+/* ========================================
+   RODAPÉ
+======================================== */
+
+footer {
+    background-color: var(--cor-primaria);
+    color: var(--cor-branca);
+
+    text-align: center;
+    padding: var(--espaco-3);
+
+    margin-top: var(--espaco-5);
+}
+
+footer p {
+    margin: 0;
+}
+
+
+/* ========================================
+   5 BREAKPOINTS RESPONSIVOS
+======================================== */
+
+
+/* Breakpoint 1 - celular pequeno */
+
+@media (max-width: 480px) {
+
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
+        width: 92%;
+    }
+
+    .grid > img,
+    .grid > section {
+        grid-column: span 1;
+    }
+
+    header {
+        padding: var(--espaco-2);
+    }
+
+    header h1 {
+        font-size: var(--fonte-2);
+    }
+
+    .feedback,
+    main {
+        width: 92%;
+    }
+}
+
+
+/* Breakpoint 2 - celular */
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid > img {
+        grid-column: span 2;
+    }
+
+    .grid > section {
+        grid-column: span 2;
+    }
+}
+
+
+/* Breakpoint 3 - tablet */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    .grid {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .grid > img {
+        grid-column: span 6;
+    }
+
+    .grid > section {
+        grid-column: span 2;
+    }
+}
+
+
+/* Breakpoint 4 - computador */
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+
+    .grid {
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    .grid > img {
+        grid-column: span 12;
+    }
+
+    .grid > section {
+        grid-column: span 4;
+    }
+}
+
+
+/* Breakpoint 5 - tela grande */
+
+@media (min-width: 1440px) {
+
+    .grid {
+        grid-template-columns: repeat(12, 1fr);
+        max-width: 1400px;
+    }
+
+    .grid > img {
+        grid-column: span 12;
+    }
+
+    .grid > section {
+        grid-column: span 4;
+    }
+
+    main,
+    .feedback {
+        max-width: 1400px;
+    }
+}
+
+
+/* ========================================
+   MENU NO CELULAR
+======================================== */
+
+@media (max-width: 767px) {
+
+    header {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+    }
+
+    .menu.menu-aberto {
+        display: flex;
+    }
+
+    .menu a {
+        width: 100%;
+    }
+
+    .submenu {
+        position: static;
+        width: 100%;
+    }
+}

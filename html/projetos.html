@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos Sociais - Projeto ONG</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Projetos Sociais</h1>
+
+        <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+
+        <nav class="menu">
+            <a href="index.html">Início</a>
+
+            <div class="dropdown">
+                <a href="projetos.html">Projetos</a>
+
+                <div class="submenu">
+                    <a href="projetos.html">Projetos sociais</a>
+                    <a href="cadastro.html">Quero ajudar</a>
+                </div>
+            </div>
+
+            <a href="cadastro.html">Cadastro</a>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <section>
+            <h2>Nossos projetos</h2>
+
+            <p>
+                Conheça algumas das ações realizadas pelo Projeto ONG
+                para ajudar animais em situação de vulnerabilidade e
+                incentivar a participação da comunidade.
+            </p>
+        </section>
+
+
+        <div class="cards">
+
+            <section class="card">
+                <h2>Campanhas de doação</h2>
+
+                <p>
+                    Realizamos campanhas de doação para ajudar animais
+                    em situação de risco da comunidade que precisam de apoio.
+                </p>
+            </section>
+
+
+            <section class="card">
+                <h2>Trabalho voluntário</h2>
+
+                <p>
+                    Os voluntários podem participar das ações sociais
+                    e colaborar com as atividades realizadas pela ONG.
+                </p>
+            </section>
+
+
+            <section class="card">
+                <h2>Como ajudar</h2>
+
+                <p>
+                    É possível ajudar através de doações ou participando
+                    como voluntário em nossos projetos sociais.
+                </p>
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <footer>
+        <p>Projeto ONG - 2026</p>
+    </footer>
+
+
+    <script>
+        const botaoMenu = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.menu');
+
+        botaoMenu.addEventListener('click', function () {
+            menu.classList.toggle('menu-aberto');
+        });
+    </script>
+
+</body>
+
+</html>
