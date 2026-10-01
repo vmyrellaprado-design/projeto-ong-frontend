@@ -88,3 +88,11 @@ O projeto utiliza uma organização inspirada no GitFlow:
 
 As mensagens de commit seguem o padrão Conventional Commits, utilizando identificadores como `docs:` para alterações na documentação e `feat:` para novas funcionalidades.
 
+## Fluxo de desenvolvimento
+
+As novas alterações são desenvolvidas em branches específicas antes de serem integradas à branch `develop`. Esse fluxo permite manter o histórico do projeto organizado e facilita a identificação das mudanças realizadas.
+
+As branches de funcionalidade e documentação são utilizadas para desenvolver alterações de forma isolada. Após a conclusão e verificação das mudanças, elas podem ser integradas à `develop`, mantendo a `main` como referência da versão principal do projeto.
+
+O uso de commits descritivos e Pull Requests contribui para a rastreabilidade das alterações e para a documentação do processo de desenvolvimento.
+
