@@ -88,3 +88,17 @@ O projeto utiliza uma organização inspirada no GitFlow:
 
 As mensagens de commit seguem o padrão Conventional Commits, utilizando identificadores como `docs:` para alterações na documentação e `feat:` para novas funcionalidades.
 
+
+## Execução local
+
+O projeto foi desenvolvido com HTML, CSS e JavaScript e não necessita da instalação de dependências para sua execução.
+
+Para executar a aplicação localmente:
+
+1. Faça o download ou clone este repositório.
+2. Abra a pasta do projeto no computador.
+3. Acesse a pasta `html`.
+4. Abra o arquivo `index.html` em um navegador.
+5. Utilize o menu da aplicação para navegar entre as seções Início, Projetos e Cadastro.
+
+Como o projeto utiliza tecnologias executadas diretamente pelo navegador, não é necessário instalar pacotes ou executar comandos de build.
